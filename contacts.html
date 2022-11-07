@@ -17,33 +17,149 @@
     </head>
     
     <body>
-        <header>
+       <header>
             <section class="container">
-                <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span></span></div>
+                <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span>Москва</span></div>
             </section>
-            <section class="container">Здесь должны быть лого, форма поиска, входы в личный кабинет и корзину</section>
+            <section class="container">
+                 <div class="middlestring">
+                    <img src="images/logo.png" alt="логотип сайта" class="logo">
+                    <div class="search">
+                        <input type="text" name="finder" placeholder="поиск товара..."></input>
+                        <button class="finder" type="button">найти</button>
+                    </div>
+                    <div class="user">
+                        <a class="basket" href="order.html">&nbsp; Корзина</a>
+                        <a class="account" href="#">&nbsp; Личный кабинет</a>
+                    </div>
+                    
+                 </div>
+
+            <!--Здесь должны быть лого, форма поиска, входы в личный кабинет и корзину-->
+
+            </section>
             <section class="container">
                 <nav class="topmenu">
                     <a href="index.html"><span>Главная страница</span></a>
                     <a href="catalog.html"><span>Каталог</span></a>
-                    <a href="product.html"><span>Товар</span></a>
+                    <a href="product.html"><span>Товары</span></a>
                     <a href="order.html"><span>Корзина</span></a>
                     <a href="contacts.html"><span>Контакты</span></a>
                 </nav>
+                <h1>ИЗГОТОВЛЕНИЕ  НА ЗАКАЗ<br>ДУШЕВЫХ  ПЕРЕГОРОДОК, ЗЕРКАЛ И ОГРАЖДЕНИЙ ИЗ СТЕКЛА</h1>
+                
+                <div class="button2">
+                    <a href="#win1" class="button"><button class="cost" type="button">УЗНАТЬ СТОИМОСТЬ</button>
+                    </a>
+                    </div>
+                    
+                <div class="dm-overlay" id="win1">
+                    <div class="dm-table">
+                        <div class="dm-cell">
+                            <div class="dm-modal">
+                                <a href="#close1" class="close1"></a>
+                                <h3>Оставьте заявку и получите расчет стоимости:<br>сроки и смету уже сегодня</h3>
+                                <div class="pl-left"><br><hr>
+                                    <h4>Имя</h4> 
+                                    <input type="text" name="name" placeholder="Ваше имя"></input>
+                                    <h4>Email</h4> 
+                                    <input type="email" name="email" placeholder="Ваш e-mail"></input>
+                                </div><br>
+                                 <button class="finder" type="button">отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+                             
         </header>
         
         <main>
-            <section class="container">
-                ЗДЕСЬ НАДО СДЕЛАТЬ КОНТАКТЫ И ФОРМУ ОБРАТНОЙ СВЯЗИ.
-                <br>
-                ПОДКЛЮЧАТЬ ФОРМУ НЕ НАДО.
+        <section class="action">
+                <div class="container">
+                    <p>ПОЛУЧИТЕ СКИДКУ 10%! ДО КОНЦА АКЦИИ:</p>
+                    <p><span class="actiontimer" data-actionend="2022-11-10T12:00:00">&nbsp;</span></p>
+                </div>
+            </section>
+            <section class="container cont">
+                <div class="contacthead">
+                    <h1>Контактные данные</h1>
+                    <h3>Позвоните или напишите нам! Есть вопросы? Мы поможем!</h3>
+            </div>
+            
+            <div class = "contwrapper">
+                    <div class="column">
+                        <div class="address">
+                            <img src='images/contactus1.jpg'>
+                            <h3>Адрес</h3>
+                            <p> Россия, г.Москва, Рязанский проспект, 7, стр. 1 </p>
+                            <h3>Телефон</h3>
+                                <ul>
+                                    <li><a href="#" class="phone">+7-495-7313-4321</a></li>
+                                    <li><a href="#" class="phone">+7-916-0000-1234</a></li>
+                                </ul>
+                            <h3>Сервисы онлайн</h3>
+                            <p class="web"><a href="#">www.site.com</a></p>
+                            <p class="email"><a href="mailto:hello.site@gmail.com">hello.site@gmail.com></a></p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="message">
+                            <form action="" method="GET" name="form1">
+                                <fieldset>
+                                    <h3>Отправьте нам сообщение</h3>
+                                    <h4>Ваше имя</h4>                   
+                                    <input type="text" name="name" placeholder="Ваше имя"></input>
+                                    <h4>E-mail</h4> 
+                                    <input type="email" name="email" placeholder="Ваш E-mail"></input>
+                                    <h4>Сообщение</h4>
+                                    <textarea name="message" placeholder="Ваше сообщение"></textarea>
+                                    <button type="button">ОТПРАВИТЬ</input>
+                                </fieldset>
+                            </form>
+                         </div>
+                    </div>
+                </div>
+            <div class="map" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4493.076790972906!2d37.73693974217388!3d55.731773827280556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab546848e85b3%3A0x5183098af5496546!2z0KPRh9C10LHQvdGL0Lkg0YbQtdC90YLRgCAi0J_RgNC-0YTQtdGB0YHQuNC-0L3QsNC7Ig!5e0!3m2!1sru!2sru!4v1666551743329!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            
             </section>
         </main>
         
         <footer>
-            <section class="container">Меню столбиками</section>
-            <section class="container">Строка копирайта</section>
+          <div class="footer">
+          <img src="images/logo.png" alt="логотип сайта" class="logo">
+            <section class="container">
+               <nav class="bottommenu">
+                    <a href="index.html"><span>ГЛАВНАЯ СТРАНИЦА</span></a>
+                    <a href="catalog.html"><span>Каталог</span></a>
+                    <a href="product.html"><span>Товар</span></a>
+                    <a href="order.html"><span>Корзина</span></a>
+                    <a href="contacts.html"><span>Контакты</span></a>
+                </nav>          
+            </section>
+            <section class="container">
+                <nav class="bottommenu">
+                    <span>УСЛУГИ</span>
+                    <a href="#"><span>Замеры и консультации</span></a>
+                    <a href="#"><span>Разработка дизайн-проекта</span></a>
+                    <a href="#"><span>Конструкторское бюро</span></a>
+                    <a href="#"><span>Доставка</span></a>
+                </nav>    
+             </section>
+             <section class="container">
+                <nav class="bottommenu">
+                    <span>ИНФОРМАЦИЯ</span>
+                    <a href="#"><span>Сроки изготовления</span></a>
+                    <a href="#"><span>Гарантия</span></a>
+                    <a href="#"><span>Конструкторское бюро</span></a>
+                </nav>    
+             </section>
+          </div>
+            <section class="container"></section>
+            <hr>
+            <h6>Copyright<sup>&#169;</sup> Stanislav M. 2022</h6>
         </footer>
     </body>
 </html>
