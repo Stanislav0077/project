@@ -1,0 +1,107 @@
+diff --git a/js/main.js b/js/main.js
+index dcf382e..6782167 100644
+--- a/js/main.js
++++ b/js/main.js
+@@ -7,22 +7,19 @@ let startbasket = [
+         id: 1,
+         name: 'Душевой бокс Timo T-1150',
+         price: 108000,
+-        quantity: 1,
+-        link: ''
++        quantity: 1
+     },
+     {
+         id: 2,
+         name: 'Душевая кабина Timo Puro H-510',
+         price: 186100,
+-        quantity: 1,
+-        link: ''
++        quantity: 1
+     },
+     {
+-        id: 111,
++        id: 3,
+         name: 'Душевая кабина Timo Armo H-506',
+         price: 234130,
+-        quantity: 1,
+-        link: ''
++        quantity: 1
+     }
+ ];
+ /* functions */
+@@ -251,10 +248,9 @@ $(function(){
+         let res = {}
+         let aim = $(this).parents('.product');
+         res.id = aim.data('product-id');
+-        res.name = aim.find('h1').html();
++        res.name = aim.find('h3').html();
+         res.price = aim.find('.price span').html();
+         res.quantity = 1
+-        res.link = location.href;
+         let basket = JSON.parse(localStorage.getItem('basket'));
+         /*
+         вариант с флагом
+@@ -293,8 +289,21 @@ $(function(){
+         let point = $('.table tbody');
+         let count = 1;
+         let basket = JSON.parse(localStorage.getItem('basket'));
+-        if (!basket) basket = [];
+-        basket.push(...startbasket);
++        if (!basket) {
++            basket = startbasket;
++        } else {
++            for (let i of startbasket) {
++                let flag = true;
++                for (let j of basket) {
++                    if (i.id == j.id) {
++                        j.quantity += i.quantity;
++                        flag = false;
++                        break;
++                    }
++                }
++                if (flag) basket.push(i);
++            }
++        }
+         for (let item of basket) {
+             let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#10060;</td></tr>';
+             point.append(hlpstr);
+diff --git a/product.html b/product.html
+index fd4649c..1d0cead 100644
+--- a/product.html
++++ b/product.html
+@@ -109,7 +109,7 @@
+                 </ul>
+             </section>
+             <section class="container prod" type="prod">
+-                <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
++                <div class="product" data-product-id="1" itemscope itemtype="https://schema.org/Product">
+                     <div class="images">
+                         <div class="bigimage">
+                             <img src="images/82295.jpg" alt="" itemprop="image">
+@@ -162,7 +162,7 @@
+                 <script defer src="js/lightbox.js"></script>
+             </section>
+             <section class="container prod" type="prod">
+-                <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
++                <div class="product" data-product-id="2" itemscope itemtype="https://schema.org/Product">
+                     <div class="images">
+                         <div class="bigimage">
+                             <img src="images/2076850-3.jpg" alt="" itemprop="image">
+@@ -212,7 +212,7 @@
+                 </div>
+             </section>
+             <section class="container prod">
+-                <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
++                <div class="product" data-product-id="3" itemscope itemtype="https://schema.org/Product">
+                     <div class="images">
+                         <div class="bigimage">
+                             <img src="images/82263.jpg" alt="" itemprop="image">
+@@ -262,7 +262,7 @@
+                 </div>
+             </section>
+             <section class="container prod" type="prod">
+-                <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
++                <div class="product" data-product-id="4" itemscope itemtype="https://schema.org/Product">
+                     <div class="images">
+                         <div class="bigimage">
+                             <img src="images/82261.jpg" alt="" itemprop="image">

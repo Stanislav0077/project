@@ -7,22 +7,29 @@ let startbasket = [
         id: 1,
         name: 'Душевой бокс Timo T-1150',
         price: 108000,
-        quantity: 1,
-        link: ''
+        quantity: 1
+        /*link: ''*/
     },
     {
         id: 2,
         name: 'Душевая кабина Timo Puro H-510',
         price: 186100,
-        quantity: 1,
-        link: ''
+        quantity: 1
+        /*link: ''*/
     },
     {
-        id: 111,
+        id: 3,
         name: 'Душевая кабина Timo Armo H-506',
         price: 234130,
-        quantity: 1,
-        link: ''
+        quantity: 1
+        /*link: ''*/
+    },
+    {
+        id: 4,
+        name: 'Душевая кабина Timo Helma H-520',
+        price: 281060,
+        quantity: 1
+        /*link: ''*/
     }
 ];
 /* functions */
@@ -251,10 +258,10 @@ $(function(){
         let res = {}
         let aim = $(this).parents('.product');
         res.id = aim.data('product-id');
-        res.name = aim.find('h1').html();
+        res.name = aim.find('h3').html();
         res.price = aim.find('.price span').html();
         res.quantity = 1
-        res.link = location.href;
+        /*res.link = location.href;*/
         let basket = JSON.parse(localStorage.getItem('basket'));
         /*
         вариант с флагом
@@ -293,8 +300,24 @@ $(function(){
         let point = $('.table tbody');
         let count = 1;
         let basket = JSON.parse(localStorage.getItem('basket'));
-        if (!basket) basket = [];
-        basket.push(...startbasket);
+        /*if (!basket) basket = [];
+        basket.push(...startbasket);*/
+        if (!basket) {
+            basket = startbasket;
+        } else {
+            for (let i of startbasket) {
+                let flag = true;
+                for (let j of basket) {
+                    if (i.id == j.id) {
+                        j.quantity += i.quantity;
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) basket.push(i);
+            }
+        }
+        console.log(basket)
         for (let item of basket) {
             let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#10060;</td></tr>';
             point.append(hlpstr);

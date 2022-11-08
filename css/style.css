@@ -124,7 +124,8 @@ a:hover > span {
 }
 .container {
     margin: 0 auto;
-    /*width: 1320px; оригинал*/
+    padding: 0;
+    /*width: 1320px; исходный*/
     width: 100%;
 }
 /* icons */
@@ -172,6 +173,9 @@ header .container {
 main{
     flex: 1 1 auto;
     position: relative;
+    padding: 0;
+    margin: 0;
+    align-items: center;
 }
 .mainindex {
     top: -300px;
@@ -568,7 +572,7 @@ main h2{
 }
 main p {
     font: 300 italic 16px/20px 'Roboto';
-    
+    margin: 20px 0;
 }
 .intro img{
     position: relativ;
@@ -576,8 +580,11 @@ main p {
     margin: 0 20px;
 }
 .container1 {
-    padding: 10px 100px;
+    padding: 10px 10vw;
      background-image: linear-gradient(rgba(200, 200, 200, 0.6), rgba(255, 255, 255, 0.6));
+}
+.container1 img{
+    width: 30vw;
 }
 .container1 h2 {
     margin: 20px;
@@ -590,8 +597,14 @@ main p {
    
   }
 .intro img{
-    max-width: 200px;
+    width: 300px;
     height: auto;
+}
+.intro p {
+    font: 500 italic 18px/24px 'Roboto';
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.1em;
 }
 .gridindex {
     display: grid;
@@ -611,18 +624,18 @@ main p {
     height: 60px;
     width: 60px;
     text-align: center;
-    margin: 20px;
+    margin: 40px;
 }
 .middleimg img {
     width: 30vw;
-    height: auto;
+    height: 50vw;
 }
 
 .righttext img {
     height: 70px;
     width: 60px;
     text-align: center;
-    margin: 30px 0 20px;
+    margin: 50px 0 35px;
 }
 
 .lefttext {
@@ -828,7 +841,7 @@ footer>hr {
     gap: 20px;
 }
 .catalog aside {
-    flex: 0 0 30vw;
+    flex: 0 0 27vw;
     background: gray;
     color: white;
 }
@@ -1275,6 +1288,32 @@ background: #f1f97c;
     width: 20vw;
 }
 /* order */
+
+.name a{
+    color: #000;
+}
+thead{
+    background-color: orange;
+}
+.icon {
+    color: red !important;
+}
+.table-striped {
+    margin: 20px;
+}
+.mb-3{
+    width: 50vw;
+    margin: 0 auto;
+}
+lable,form-lable {
+    position: relative;
+    display: inline-block;
+    text-align: center; 
+    width: 100%;
+}
+.mb-3 input {
+    box-shadow: -5px 10px 20px rgba(16, 112, 177, 0.2);
+}
 .order .icon {
     font-family: 'icomoon' !important;
     cursor: pointer;
@@ -1337,6 +1376,9 @@ background: #f1f97c;
     height: 30px;
     text-align: center;
 }
+#agree {
+    background-color: orange;
+}
 .container.empty,
 .empty .container {
     display: none;
@@ -1354,7 +1396,7 @@ background: #f1f97c;
 .contacthead h1 {
     font: normal 500 44px/74px 'Roboto';
     letter-spacing: .04em;
-    padding: 56px 0 0;
+    padding: 20px 0 0;
     color: #4f4f4f;
 }
 .contacthead h3 {
@@ -1497,7 +1539,8 @@ fieldset h3 {
 .map {
     text-align: center;
     height: 42%;
-    margin: 0 auto 112px;
+    margin: 0 auto;
+    padding: 100px;
  }
 iframe {
     border: 0px;

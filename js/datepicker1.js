@@ -7,7 +7,7 @@ function makeDatePicker(fieldDate) {
     makeCalendar(fieldDate);
     // здесь можно добавить анимацию появления календаря
 }
-function makeCalendar(fieldDate) { // формат даты - ГГГГ-ММ-ДД
+function makeCalendar(fieldDate) {
     let hlpdate = new Date(); // вспомогательная дата. берем сегодняшнюю.
     
     /* фиксируем сегодняшний день */
@@ -16,9 +16,7 @@ function makeCalendar(fieldDate) { // формат даты - ГГГГ-ММ-ДД
     let tday = hlpdate.getDate();    
     
     if (fieldDate.match(/^\d{4}\-\d{2}\-\d{2}$/)) { // если аргумент соответствует ГГГГ-ММ-ДД, берем его
-        // hlpdate = new Date(fieldDate); // 2022-00-01 или 2022-13-01 вызывает ошибку
-        let [fd1, fd2, fd3] = fieldDate.split('-');
-        hlpdate = new Date(fd1, --fd2, fd3);
+        hlpdate = new Date(fieldDate);
     }
     
     /* сохраняем основную дату */
