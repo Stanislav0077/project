@@ -161,7 +161,9 @@ header {
     color: #eee;
     border-bottom-right-radius: 25%;
 }
-
+header .container {
+    max-width: none;
+}
 main {
     flex: 1 1 auto;
     position: relative;
@@ -478,6 +480,9 @@ nav {
 .topmenu .current:hover span {
     text-decoration: none;
 }
+.index h1{
+    line-height: 80px;
+}
 header h1 {
     text-align: center;
     margin: 30px auto;
@@ -778,7 +783,7 @@ main p {
     padding: 10px 0;
     margin: 30px auto 0 20px;
 }
-.bottommenu span,a {
+.bottommenu span,.bottommenu a {
     display: inline-block;
     color: #eee;
     font-size: 16px;
@@ -871,7 +876,7 @@ top: 350px;
     border: 1px solid white;
     color: white;
     padding: 2px 5px;
-    width: 50px;
+    width: 60px;
     text-align: center;
     margin: 0 5px;
 }
@@ -1107,6 +1112,7 @@ input[type='radio']:checked:after {
 }    
 .cat-itemcard {
     background-color: lightblue;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -1119,7 +1125,7 @@ input[type='radio']:checked:after {
 .breadcrumbs {
     padding: 20px 0;
     height: 20px;
-    margin: 0 0 20px;
+    margin: 0 0 20px 60px;
 }
 .breadcrumbs li {
     display: inline-block;

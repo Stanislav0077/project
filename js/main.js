@@ -1,26 +1,26 @@
 /* variables */
 let citylist = ['Москва', 'Санкт-Петербург', 'Казань', 'Екатеринбург', 'Новосибирск', 'Севастополь', 'Ярославль', 'Вологда', 'Ростов-на-Дону', 'Барнаул', 'Петрозаводск', 'Самара'/*, 'Саратов', 'Тверь', 'Вашингтон', 'Париж', 'Пермь', 'Екатеринбург', 'Новосибирск', 'Сочи'*/];
 let rangemin = 0;
-let rangemax = 300;
+let rangemax = 300000;
 let startbasket = [
     {
         id: 1,
-        name: 'ZHABA',
-        price: 2000,
-        quantity: 100,
+        name: 'Душевой бокс Timo T-1150',
+        price: 108000,
+        quantity: 1,
         link: ''
     },
     {
         id: 2,
-        name: 'GADIUKA',
-        price: 3000,
-        quantity: 10,
+        name: 'Душевая кабина Timo Puro H-510',
+        price: 186100,
+        quantity: 1,
         link: ''
     },
     {
         id: 111,
-        name: 'Cangaroo',
-        price: 15500,
+        name: 'Душевая кабина Timo Armo H-506',
+        price: 234130,
         quantity: 1,
         link: ''
     }
@@ -296,7 +296,7 @@ $(function(){
         if (!basket) basket = [];
         basket.push(...startbasket);
         for (let item of basket) {
-            let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#xe906;</td></tr>';
+            let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name"><a href="'+item.link+'">'+item.name+'</a></td><td class="qty"><span class="minus">&minus;</span><strong>'+item.quantity+'</strong><span class="plus">&plus;</span></td><td class="price">'+item.price+'</td><td class="sum"></td><td class="delete icon">&#10060;</td></tr>';
             point.append(hlpstr);
             count++;
         }
