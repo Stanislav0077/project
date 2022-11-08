@@ -783,7 +783,7 @@ main p {
     padding: 10px 0;
     margin: 30px auto 0 20px;
 }
-.bottommenu span,.bottommenu a {
+.bottommenu span,a {
     display: inline-block;
     color: #eee;
     font-size: 16px;
